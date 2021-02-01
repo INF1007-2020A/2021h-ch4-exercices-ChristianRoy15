@@ -3,16 +3,18 @@
 
 
 def is_even_len(string: str) -> bool:
-    pass
+    is_pair = len(string) % 2 == 0
+    return is_pair
 
 
 def remove_third_char(string: str) -> str:
-    pass
+    string = string[0:2] + string[3:]
+
+    return (string)
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
     pass
-
 
 def get_number_of_char(string: str, char: str) -> int:
     pass
@@ -33,7 +35,7 @@ def main() -> None:
     print(f"On supprime le 3e caratère dans la chaine: {chaine}. Résultat : {remove_third_char(chaine)}")
 
     chaine = "hello world!"
-    print(f"On remplace le caratère w par le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'w', 'z')}")
+    print(f"On remplace le caratère w p ar le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'w', 'z')}")
 
     print(f"Le nombre d'occurrence de l dans hello est : {get_number_of_char(chaine, 'l')}")
     
