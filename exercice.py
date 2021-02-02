@@ -14,14 +14,30 @@ def remove_third_char(string: str) -> str:
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    pass
+    for i in range(len(string)):
+        if string[i] == old_char:
+            return string[:i] + new_char + string[i + 1:]
 
 def get_number_of_char(string: str, char: str) -> int:
-    pass
+    occurence = 0
+    for c in string:
+        if c == char:
+            occurence += 1
+
+    return occurence
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    pass
+
+    number_of_word = 0
+    sentence = sentence.split()
+
+    for i in sentence:
+        if i == word:
+            number_of_word += 1
+
+    return number_of_word
+
 
 
 def main() -> None:
